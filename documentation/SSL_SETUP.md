@@ -23,6 +23,7 @@
     subjectAltName = @alt_names
     [alt_names]
     DNS.1 = jracowboy.com
+    IP.1 = 127.0.0.1
     ```
 5. Now, we sign the csr with the configuration stated in our .ext file
     ```bash
@@ -52,3 +53,9 @@ sudo security add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.key
 8. Change the “When using this certificate:” select box to Always Trust
 9. Close the certificate window
 10. During the process it may ask you to enter your password (or scan your finger), do that
+
+## Changing alias of local to bypass domain name restriction in tls cert
+1. ```bash cd /etc/ ```
+2. ```vi edit hosts```
+3.  add an alias like this
+> 127.0.0.1 localhost #jrati.com

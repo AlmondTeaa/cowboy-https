@@ -10,3 +10,5 @@ A minimal HTTPS web server built with [Cowboy](https://ninenines.eu/docs/en/cowb
 ## ⚙️ Prerequisites
 - **Erlang/OTP 28** or newer  
 - **rebar3** (for building and running Erlang projects)
+
+## 🧑🏽‍💻 In-depth Guide is found in the Documenation Folder
