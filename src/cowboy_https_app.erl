@@ -6,8 +6,11 @@
 
 start(_Type, _Args) ->
     Dispatch = cowboy_router:compile([
-        {'_', [
-            {"/", toppage_h, []}
+    {'_', [
+            {"/", index, []},
+            {"/admin/[...]", register, []},
+            %{look in the priv_dir, at the application lvl3}
+            {"/css/[...]",cowboy_static,{priv_dir, cowboy_https, "css"}}
         ]}
     ]),
     PrivDir = code:priv_dir(cowboy_https),
